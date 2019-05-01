@@ -36,17 +36,12 @@
   "author": "Fullstack Academy of Code",
   "license": "MIT",
   "dependencies": {
-<<<<<<< HEAD
     "ajv": "^6.10.0",
     "axios": "^0.15.3",
-=======
-    "axios": "^0.18.0",
->>>>>>> dea8cc75a042dfb9ed1c8e3912879f038073a47c
     "compression": "^1.7.3",
     "connect-session-sequelize": "^6.0.0",
     "express": "^4.16.4",
     "express-session": "^1.15.1",
-<<<<<<< HEAD
     "history": "^4.6.3",
     "lightbox-react": "^0.3.7",
     "morgan": "^1.8.1",
@@ -71,24 +66,6 @@
     "semantic-ui-react": "^0.86.0",
     "sequelize": "^4.38.0",
     "socket.io": "^2.1.1"
-=======
-    "history": "^4.9.0",
-    "morgan": "^1.9.1",
-    "passport": "^0.4.0",
-    "passport-google-oauth": "^2.0.0",
-    "pg": "^7.9.0",
-    "pg-hstore": "^2.3.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.1",
-    "react-router-dom": "^5.0.0",
-    "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "sequelize": "^5.3.1",
-    "socket.io": "^2.2.0"
->>>>>>> dea8cc75a042dfb9ed1c8e3912879f038073a47c
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
