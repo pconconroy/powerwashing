@@ -1,8 +1,9 @@
-@font-face {
-  font-family: 'Eras Demi ITC';
+/* @font-face {
+  font-family: 'Teko', sans-serif;
 
-  src: url('./assets/Eras_Demi_ITC.ttf') format('ttf');
-}
+  src: url('./assets/Eras_Demi_ITC.ttf') format('ttf'),
+    url('./assets/Eras_Demi_ITC.woff') format('ttf');
+} */
 
 body {
   font-family: 'Baloo Bhaijaan', cursive;
@@ -162,11 +163,11 @@ img {
 h1,
 p {
   color: black !important;
-  font-family: 'Eras Demi ITC';
+  font-family: 'Teko', sans-serif;
 }
 h3 {
   color: white !important;
-  font-family: 'Eras Demi ITC';
+  font-family: 'Teko', sans-serif;
 }
 h2 {
   color: white !important;
@@ -268,7 +269,7 @@ li {
 #title-nav {
   font-size: 400%;
 
-  font-family: 'Eras Demi ITC';
+  font-family: 'Teko', sans-serif;
 }
 #button-font {
   font-family: 'Baloo Bhaijaan', cursive;
@@ -343,7 +344,7 @@ li {
 }
 #review-description {
   color: black !important;
-  font-family: 'Eras Demi ITC' !important;
+  font-family: 'Teko', sans-serif !important;
 }
 #about-content {
   margin: 25%;
@@ -356,7 +357,7 @@ li {
 #signature {
   max-width: 20%;
   margin-left: 25%;
-  object-fit: cover;
+
   height: 100px;
   width: 280px;
 }
@@ -371,4 +372,174 @@ hr {
   background-color: white;
   border: 1px;
   border-color: white;
+}
+#mobile-button {
+  width: 23% !important;
+  margin-left: 1%;
+  margin-right: 1%;
+
+  flex: 1;
+}
+#mobile-butt {
+  width: 100%;
+  height: 100%;
+  margin-right: 0 !important;
+}
+.mobile-nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+.mobile-container-nav {
+  width: 100%;
+  text-align: center;
+}
+html {
+  width: 100%;
+}
+#mobile-about-content {
+  margin: 3%;
+  line-height: 30px;
+  font-family: 'Baloo Bhaijaan', cursive;
+  color: black !important;
+}
+/* #gallery-row-mobile {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  text-align: center;
+} */
+#gallery-row-mobile .ui.card {
+  width: 100% !important;
+}
+#image-viewer-mobile {
+  background-color: white;
+  width: 100%;
+  height: 40%;
+
+  position: absolute;
+  top: 17%;
+
+  text-align: center;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#image-viewer-mobile img {
+  height: 60%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 14%;
+}
+#mobile-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+}
+.mobile-customer-updates {
+  width: 90%;
+  min-width: 100px;
+  /* max-width: 200px; */
+  flex: 1;
+  flex-direction: column;
+
+  border: 5px solid white;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  min-width: 180px;
+  display: flex;
+  height: 20%;
+
+  color: white;
+}
+/* .mobile-customer-updates ul {
+  height: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.mobile-customer-updates li {
+  margin: 0;
+} */
+.mobile-carousel {
+  margin: 5%;
+  margin-bottom: 0;
+
+  text-align: center;
+  /* width: 40%; */
+  /* -webkit-animation: imageAnimation 8s infinite; /* Safari 4.0 - 8.0 */
+  /* animation: imageAnimation 8s infinite; */
+
+  border: 10px solid white;
+  border-radius: 20px;
+  width: 90%;
+  background-image: url('./assets/LOGOYPW.jpg');
+  background-size: 100%;
+}
+.mobile-returning-customer {
+  float: left;
+  width: 40%;
+  height: 30%;
+
+  /* background-color: #2ad1f7; */
+}
+#left {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#right {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+#right div.description {
+  margin-top: 5%;
+}
+#mobile-update-text {
+  flex: 2;
+  font-size: 150%;
+  /* max-height: 35%; */
+}
+#update-text li {
+  width: 50%;
+  margin: auto;
+  font-size: 500%;
+}
+#update-container {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#signature-mobile {
+  max-width: 20%;
+  margin-left: 0%;
+  height: 100px;
+  width: 280px;
+}
+#mobile-text-sig {
+  margin: 0;
+
+  font-family: 'Baloo Bhaijaan', cursive;
+}
+.mobile-contact {
+  text-align: center;
+  width: 90%;
+  display: inline-block;
+}
+#gallery-row-mobile button {
+  background-color: transparent;
+  border-width: 0;
+  margin: 10px;
+  margin-left: 20px;
 }

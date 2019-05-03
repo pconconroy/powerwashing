@@ -60,6 +60,7 @@ class Routes extends Component {
             <Route path="/about" component={About} />
             <Route path="/quote" component={Quote} />
             <Route path="/contact" component={Contact} />
+            <Route path="/gallery" component={Gallery} />
 
             <Route component={Login} />
           </Switch>

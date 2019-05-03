@@ -14,6 +14,7 @@ class Navbar extends Component {
     }
   }
   componentDidMount = () => {
+    this.handleWindowSizeChange()
     window.addEventListener('resize', this.handleWindowSizeChange)
   }
   handleWindowSizeChange = () => {
@@ -63,25 +64,32 @@ class Navbar extends Component {
             <hr />
           </div>
         ) : (
-          <div className="centered-nav">
-            <h1>Yanni's Powerwashing</h1>
+          <div className="mobile-container-nav">
+            <h1>Yanni's Pressure Washing Service</h1>
             <nav>
-              <div className="centered-nav">
-                <Link to="/home">
-                  <Button inverted>Home</Button>
+              <div className="mobile-nav">
+                {/* The navbar will show these links before you log in */}
+
+                <Link id="mobile-button" to="/home">
+                  <Button inverted id="mobile-butt">
+                    Home
+                  </Button>
                 </Link>
-                <Link to="/about">
-                  <Button inverted>About</Button>
+                <Link id="mobile-button" to="/about">
+                  <Button inverted id="mobile-butt">
+                    About
+                  </Button>
                 </Link>
 
-                <Link to="/reviews">
-                  <Button inverted>Reviews</Button>
+                <Link id="mobile-button" to="/gallery">
+                  <Button inverted id="mobile-butt">
+                    Project Gallery
+                  </Button>
                 </Link>
-                <Link to="/gallery">
-                  <Button inverted>Gallery</Button>
-                </Link>
-                <Link to="/contact">
-                  <Button inverted>Contact</Button>
+                <Link id="mobile-button" to="/contact">
+                  <Button textAlign="center" inverted id="mobile-butt">
+                    Contact
+                  </Button>
                 </Link>
               </div>
             </nav>

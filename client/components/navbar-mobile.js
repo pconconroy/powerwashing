@@ -9,23 +9,20 @@ const NavbarMobile = ({handleClick, isLoggedIn}) => (
   <div className="centered-nav">
     <h1>Yanni's Powerwashing</h1>
     (
-    <div className="centered-nav">
+    <div className="mobile-nav">
       {/* The navbar will show these links before you log in */}
 
-      <Link to="/home">
+      <Link id="mobile-button" to="/home">
         <Button inverted>Home</Button>
       </Link>
-      <Link to="/about">
+      <Link id="mobile-button" to="/about">
         <Button inverted>About</Button>
       </Link>
 
-      <Link to="/reviews">
-        <Button inverted>Reviews</Button>
+      <Link id="mobile-button" to="/gallery">
+        <Button inverted> Project Gallery</Button>
       </Link>
-      <Link to="/gallery">
-        <Button inverted>Gallery</Button>
-      </Link>
-      <Link to="/contact">
+      <Link id="mobile-button" to="/contact">
         <Button inverted>Contact</Button>
       </Link>
     </div>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Carousel from 'react-image-carousel'
-import {Card} from 'semantic-ui-react'
 
+import {Card} from 'semantic-ui-react'
+import MobileHome from './mobile-homepage'
 class Homepage extends Component {
   constructor() {
     super()
@@ -14,12 +14,25 @@ class Homepage extends Component {
     this.imageCounter = 0
     this.state = {
       image: this.images[1],
-      imageState: 'fade-in'
+      imageState: 'fade-in',
+      isMobile: false,
+      width: window.innerWidth
     }
   }
   componentDidMount = () => {
+    this.handleWindowSizeChange()
+
     setInterval(this.changeImage, 6000)
     setInterval(this.fadeImages, 6000)
+    window.addEventListener('resize', this.handleWindowSizeChange)
+  }
+  handleWindowSizeChange = () => {
+    this.setState({width: window.innerWidth})
+    if (this.state.width <= 1000) {
+      this.setState({isMobile: true})
+    } else if (this.state.width >= 1000) {
+      this.setState({isMobile: false})
+    }
   }
   changeImage = () => {
     this.imageCounter++
@@ -42,56 +55,64 @@ class Homepage extends Component {
 
   render() {
     return (
-      <div className="homepage">
-        <h1 id="title">Home</h1>
-        {/* <p>____________________________________________________</p> */}
-        <div id="row">
-          <div className="placeholder" />
-          <div className="my-carousel">
-            <img
-              src={window.location.origin + '/assets/pw1.jpg'}
-              id={this.state.imageState}
-            />
-          </div>
-          <div className="customer-updates">
-            <div id="title-text">
-              <h3>Updates to Note This Season</h3>
-            </div>
-            <ul>
-              <div id="update-container">
-                <div id="update-text">
-                  <li>Standard Prices per Square Foot has been lowered %10.</li>
-                </div>
-                <div id="update-text">
-                  <li>
-                    Special Promotions added for returning customers and
-                    referrals.
-                  </li>
-                </div>
+      <div>
+        {!this.state.isMobile ? (
+          <div className="homepage">
+            <h1 id="title">Home</h1>
+            {/* <p>____________________________________________________</p> */}
+            <div id="row">
+              <div className="placeholder" />
+              <div className="my-carousel">
+                <img
+                  src={window.location.origin + '/assets/pw1.jpg'}
+                  id={this.state.imageState}
+                />
               </div>
-            </ul>
+              <div className="customer-updates">
+                <div id="title-text">
+                  <h3>Updates to Note This Season</h3>
+                </div>
+                <ul>
+                  <div id="update-container">
+                    <div id="update-text">
+                      <li>
+                        Standard Prices per Square Foot has been lowered %10.
+                      </li>
+                    </div>
+                    <div id="update-text">
+                      <li>
+                        Special Promotions added for returning customers and
+                        referrals.
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div className="returning-container">
+              <div className="returning-customer">
+                <Card
+                  fluid
+                  header="Returning Customer?"
+                  meta="_________________"
+                  description="Save 10% when using this service again"
+                />
+              </div>
+              <div className="returning-customer">
+                <a>
+                  <Card
+                    fluid
+                    header="Satisfied with our work?"
+                    meta="_________________"
+                    description="Spread the word!"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="returning-container">
-          <div className="returning-customer">
-            <Card
-              fluid
-              header="Returning Customer?"
-              meta="_________________"
-              description="Save 10% when using this service again"
-            />
-          </div>
-          <div className="returning-customer">
-            <a>
-              <Card
-                fluid
-                header="Satisfied with our work?"
-                meta="_________________"
-                description="Spread the word!"
-              />
-            </a>
-          </div>
-        </div>
+        ) : (
+          <MobileHome />
+        )}
       </div>
     )
   }
