@@ -69,7 +69,7 @@ class Homepage extends Component {
                 />
               </div>
               <div className="customer-updates">
-                <div id="title-text">
+                {/* <div id="title-text">
                   <h3>Updates to Note This Season</h3>
                 </div>
                 <ul>
@@ -86,7 +86,7 @@ class Homepage extends Component {
                       </li>
                     </div>
                   </div>
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className="returning-container">

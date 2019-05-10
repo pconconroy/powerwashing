@@ -53,12 +53,14 @@ class MobileHome extends Component {
               id={this.state.imageState}
             />
           </div>
-          <div className="mobile-customer-updates">
+          <br />
+          <br />
+          {/* <div className="mobile-customer-updates">
             <div id="title-text">
               <h3>Updates to Note This Season</h3>
             </div>
             <ul>
-              <div id="update-container">
+              {/* <div id="update-container">
                 <div id="mobile-update-text">
                   <li>Standard Prices per Square Foot has been lowered %10.</li>
                 </div>
@@ -68,9 +70,9 @@ class MobileHome extends Component {
                     referrals.
                   </li>
                 </div>
-              </div>
-            </ul>
-          </div>
+              </div> */}
+          {/* </ul>
+          </div> */}
         </div>
         <div className="returning-container">
           <div className="mobile-returning-customer" id="left">

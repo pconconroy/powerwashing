@@ -72,7 +72,7 @@ form div {
   /* -webkit-animation: imageAnimation 8s infinite; /* Safari 4.0 - 8.0 */
   /* animation: imageAnimation 8s infinite; */
   flex: 4;
-  border: 10px solid white;
+  /* border: 10px solid white; */
   border-radius: 20px;
   height: 400px;
   background-image: url('./assets/LOGOYPW.jpg');
@@ -116,8 +116,8 @@ form div {
   flex: 1;
   flex-direction: column;
 
-  border: 5px solid white;
-  border-radius: 5px;
+  /* border: 5px solid white; */
+  /* border-radius: 5px; */
   text-align: center;
   margin: 10%;
   margin-top: 0%;
@@ -126,7 +126,7 @@ form div {
   min-width: 180px;
   display: flex;
 
-  color: white;
+  /* color: white; */
 }
 .customer-updates ul {
   height: 100%;
