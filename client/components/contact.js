@@ -43,8 +43,9 @@ class Contact extends Component {
         {!this.state.isMobile ? (
           <div id="centered">
             <div className="contact">
-              <h1>Request a Quote</h1>
-              <p>____________________________________</p>
+              <h1 id="title-req">
+                <img src="/assets/requestyan.png" />
+              </h1>
 
               <Form onSubmit={this.handleSubmit}>
                 <Form.Field id="email-message">

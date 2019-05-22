@@ -30,7 +30,9 @@ class Navbar extends Component {
       <div>
         {!this.state.isMobile ? (
           <div className="centered-nav">
-            <h1 id="title-nav">Yanni's Pressure Washing Service</h1>
+            <h1 id="title-nav">
+              <img src="/assets/titleyan.png" />
+            </h1>
             <nav>
               <div className="centered-nav">
                 <Link to="/home">
@@ -41,6 +43,11 @@ class Navbar extends Component {
                 <Link to="/about">
                   <Button inverted id="button-font">
                     About Us
+                  </Button>
+                </Link>
+                <Link to="/areas">
+                  <Button inverted id="button-font">
+                    Washable Areas
                   </Button>
                 </Link>
 
@@ -77,7 +84,12 @@ class Navbar extends Component {
                 </Link>
                 <Link id="mobile-button" to="/about">
                   <Button inverted id="mobile-butt">
-                    About
+                    About Us
+                  </Button>
+                </Link>
+                <Link id="mobile-button" to="/areas">
+                  <Button inverted id="mobile-butt">
+                    Washable Areas
                   </Button>
                 </Link>
 
@@ -88,7 +100,7 @@ class Navbar extends Component {
                 </Link>
                 <Link id="mobile-button" to="/contact">
                   <Button textAlign="center" inverted id="mobile-butt">
-                    Contact
+                    Request A Quote
                   </Button>
                 </Link>
               </div>

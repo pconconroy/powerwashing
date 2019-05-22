@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import CallToAct from './calltoact'
 
 import {Card} from 'semantic-ui-react'
 import MobileHome from './mobile-homepage'
@@ -6,17 +7,18 @@ class Homepage extends Component {
   constructor() {
     super()
     this.images = [
-      'http://oceanpowerwashing.com/wp-content/uploads/2015/03/ocean21.jpg',
-      'https://www.miraclemaintenance.com/wp-content/uploads/2016/06/pressure-washing-phoenix-flagstaff-driveway-power-washing-1550x567.jpg',
-      'https://i.ytimg.com/vi/-m_27_0nWKY/maxresdefault.jpg',
-      'http://windowworkshomeservices.com/wp-content/uploads/2014/04/pressure-washing-brick-walkway-2.jpg'
+      window.location.origin + '/assets/exteriorwall.png',
+      window.location.origin + '/assets/homepagepw1.jpg',
+      window.location.origin + '/assets/patio.jpg',
+      window.location.origin + '/assets/homepagepw1.jpg'
     ]
     this.imageCounter = 0
     this.state = {
       image: this.images[1],
       imageState: 'fade-in',
       isMobile: false,
-      width: window.innerWidth
+      width: window.innerWidth,
+      renderCall: false
     }
   }
   componentDidMount = () => {
@@ -36,12 +38,14 @@ class Homepage extends Component {
   }
   changeImage = () => {
     this.imageCounter++
+
     if (this.imageCounter > this.images.length - 1) {
       this.imageCounter = 0
     }
     this.setState({
       image: this.images[this.imageCounter]
     })
+    this.renderCall()
   }
   fadeImages = async () => {
     await this.setState({imageState: 'fade-in'})
@@ -52,24 +56,46 @@ class Homepage extends Component {
       this.setState({imageState: 'fade-out'})
     }, 5600)
   }
+  renderCall = () => {
+    if (
+      this.state.image ===
+      window.location.origin + '/assets/exteriorwall.png'
+    ) {
+      this.setState({renderCall: true})
+    } else {
+      this.setState({renderCall: false})
+    }
+  }
 
   render() {
     return (
       <div>
         {!this.state.isMobile ? (
           <div className="homepage">
-            <h1 id="title">Home</h1>
+            <h1 id="title">
+              <img src="/assets/homeyan.png" />
+            </h1>
             {/* <p>____________________________________________________</p> */}
             <div id="row">
-              <div className="placeholder" />
-              <div className="my-carousel">
-                <img
-                  src={window.location.origin + '/assets/pw1.jpg'}
-                  id={this.state.imageState}
-                />
+              <div className="placeholder placeholder-lefts">
+                <img src="/assets/logo.png" />
               </div>
-              <div className="customer-updates">
-                {/* <div id="title-text">
+              <div className="my-carousel">
+                {/* <img src={this.state.image} id={this.state.imageState} />
+                <CallToAct /> */}
+                <div id={this.state.imageState}>
+                  {!this.state.renderCall ? (
+                    <img src={this.state.image} id={this.state.imageState} />
+                  ) : (
+                    <CallToAct id={this.state.imageState} />
+                  )}
+                </div>
+              </div>
+              <div className="placeholder placeholder-right">
+                <img src="/assets/logoflipped.png" />
+              </div>
+              {/* <div className="customer-updates">
+                 <div id="title-text">
                   <h3>Updates to Note This Season</h3>
                 </div>
                 <ul>
@@ -86,8 +112,8 @@ class Homepage extends Component {
                       </li>
                     </div>
                   </div>
-                </ul> */}
-              </div>
+                </ul>
+              </div> */}
             </div>
             <div className="returning-container">
               <div className="returning-customer">

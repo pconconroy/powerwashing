@@ -49,7 +49,7 @@ class MobileHome extends Component {
         <div id="mobile-column">
           <div className="mobile-carousel">
             <img
-              src={window.location.origin + '/assets/pw1.jpg'}
+              src={window.location.origin + '/assets/pw1rotated.jpg'}
               id={this.state.imageState}
             />
           </div>
@@ -78,6 +78,7 @@ class MobileHome extends Component {
           <div className="mobile-returning-customer" id="left">
             <Card
               fluid
+              id="centered-card"
               header="Returning Customer?"
               description="Save 10% when using this service again"
             />
@@ -86,6 +87,7 @@ class MobileHome extends Component {
             <a>
               <Card
                 fluid
+                id="centered-card"
                 header="Satisfied with our work?"
                 description="Spread the word!"
               />

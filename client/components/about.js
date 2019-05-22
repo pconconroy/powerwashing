@@ -27,8 +27,10 @@ class About extends Component {
       <div>
         {!this.state.isMobile ? (
           <div className="about">
-            <h1>About Us</h1>
-            <p>_________________________________________________________</p>
+            <h1 id="title-ab">
+              <img src="/assets/about.png" />
+            </h1>
+
             <h2 id="about-content">
               Customer satisfaction, competitive pricing, and promptness have
               been the basis of my pressure washing service ever since I began
@@ -36,8 +38,10 @@ class About extends Component {
               values backing my service, it gained traction on my neighborhood’s
               Nextdoor.com social network and left positive reviews. Currently a
               college student, I now have three years worth of experience and I
-              am taking Yanni’s Pressure Washing to the next level expanding
-              services to Chicago and Northern suburbs .
+              am taking Yanni’s Pressure Washing to the next level, expanding
+              services to Chicago and Northern suburbs with the help of our
+              team. Our goal is to be the most dependable pressure washers in
+              our area in quality of work and timeliness.
             </h2>
             <img
               src={window.location.origin + '/assets/signature-site.png'}

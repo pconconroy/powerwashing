@@ -10,7 +10,7 @@ import Quote from './components/quote'
 import Contact from './components/contact'
 import NavbarMobile from './components/navbar-mobile'
 import Gallery from './components/gallery'
-
+import Areas from './components/areas'
 /**
  * COMPONENT
  */
@@ -47,6 +47,7 @@ class Routes extends Component {
             <Route path="/quote" component={Quote} />
             <Route path="/contact" component={Contact} />
             <Route path="/gallery" component={Gallery} />
+            <Route path="/areas" component={Areas} />
 
             <Route component={Login} />
           </Switch>
@@ -61,6 +62,7 @@ class Routes extends Component {
             <Route path="/quote" component={Quote} />
             <Route path="/contact" component={Contact} />
             <Route path="/gallery" component={Gallery} />
+            <Route path="/areas" component={Areas} />
 
             <Route component={Login} />
           </Switch>

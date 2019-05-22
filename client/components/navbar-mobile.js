@@ -16,9 +16,11 @@ const NavbarMobile = ({handleClick, isLoggedIn}) => (
         <Button inverted>Home</Button>
       </Link>
       <Link id="mobile-button" to="/about">
-        <Button inverted>About</Button>
+        <Button inverted>About Us</Button>
       </Link>
-
+      <Link id="mobile-button" to="/areas-mobile">
+        <Button inverted>Washable Areas</Button>
+      </Link>
       <Link id="mobile-button" to="/gallery">
         <Button inverted> Project Gallery</Button>
       </Link>
